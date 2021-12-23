@@ -1,16 +1,3 @@
-// const SideBar = () => {
-//     return(
-//         <div className="flex">
-//             <i>A</i>
-//             <i>B</i>
-//             <i>C</i>
-//             <i>D</i>
-
-//         </div>
-//     );
-// };
-// export default SideBar;
-
 import { BsGearFill } from 'react-icons/bs';
 import { FaPhone } from 'react-icons/fa';
 import { TiMessages } from 'react-icons/ti';
@@ -34,7 +21,7 @@ const SideBar = () => {
 const SideBarIcon = ({ icon, text }) => (
   <div className="sidebar-icon group">
     {icon}
-    <span class="sidebar-tooltip group-hover:scale-100">
+    <span className="sidebar-tooltip group-hover:scale-100">
       {text}
     </span>
   </div>
