@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from 'next/link'
+
 import { DiGithubAlt } from "react-icons/di";
 import TopNavigation from "../components/TopNavigation";
 import LittleSquare from "../components/LittleSquare";
