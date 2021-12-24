@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from 'next/link'
 
 import { DiGithubAlt } from "react-icons/di";
-import TopNavigation from "../components/TopNavigation";
 import LittleSquare from "../components/LittleSquare";
 import Textarea from "../components/Textarea";
 
@@ -16,8 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <TopNavigation title="Homepage" />
+      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center my-20">
         <h1 className="text-6xl font-bold">
           Welcome to{" "}
           <a className="text-green-600" href="https://nextjs.org">

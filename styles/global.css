@@ -34,11 +34,10 @@
   }
 
   .top-navigation {
-    @apply flex flex-row items-center justify-evenly 
+    @apply fixed top-0
+    flex flex-row items-center justify-evenly 
     bg-gray-300 dark:bg-gray-700 bg-opacity-90 
-    w-full h-16 
-    m-0 
-    shadow-lg;
+    w-11/12 h-16 mx-20 shadow-lg;
   }
 
   .top-navigation-icon {
