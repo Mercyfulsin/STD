@@ -6,7 +6,6 @@ export default function Layout({ children }) {
     <div className="flex flex-col">
       <TopNavigation />
       <>{children}</>
-      <Footer />
     </div>
   );
 }

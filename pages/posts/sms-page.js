@@ -19,14 +19,14 @@ export default function SMS() {
               .env
             </code> with your Twilio information.
           </p>
-          <div className="content-list">
+
             <LittleSquare
               title="Send SMS"
               content={<Textarea textName="SMS_Box_1" />} />
               <LittleSquare
               title="Fetch SMS"
               content={<Textarea textName="SMS_Box_1" />} />
-          </div>
+          
           <div id="modal-root"></div>
         </>} />
     </div>

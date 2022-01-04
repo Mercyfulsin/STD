@@ -4,7 +4,8 @@ import Footer from "../Footer";
 
 const Home = () => {
   return (
-    <div className="items-center justify-center w-full flex-1 px-20 text-center my-20">
+    //<div className="items-center justify-center w-full flex-1 px-20 text-center my-20">
+    <div className="content-container h-screen overflow-auto">  
       <DefaultLook
         text={
           <>

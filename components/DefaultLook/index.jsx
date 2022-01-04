@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../Footer";
 const DefaultLook = ({text}) => {
     return (
         <div>
@@ -8,9 +9,11 @@ const DefaultLook = ({text}) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
   
-        <main className="">
+        <main className="content-list">
         {text}
-        </main></div>  
+        </main>
+        <Footer />
+        </div>  
     );
   };
   
