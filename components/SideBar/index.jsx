@@ -12,7 +12,7 @@ const SideBar = () => {
         <SideBarIcon icon={<SiTwilio size="28" />} text="Homepage" link="/" />
         <Divider />
         <SideBarIcon icon={<FaPhone size="20" />} text="Voice" />
-        <SideBarIcon icon={<TiMessages size="20" />} text="SMS" link="/posts/new-page" />
+        <SideBarIcon icon={<TiMessages size="20" />} text="SMS" link="/posts/sms-page" />
         <Divider />
         <SideBarIcon icon={<BsGearFill size="22" />} text="Settings" />
     </div>

@@ -1,19 +1,13 @@
 import 'tailwindcss/tailwind.css';
 import '../styles/global.css';
 import SideBar from '../components/SideBar';
-import TopNavigation from "../components/TopNavigation";
+import Layout from '../components/Layout';
 function MyApp({ Component, pageProps }) {
   return (
-
-      <div className="flex">
-        
+        <Layout>
         <SideBar />
-        <TopNavigation title="Home" />
-        
         <Component {...pageProps} />
-      </div>
-
-  // <Component {...pageProps} />,
+        </Layout>
   );
 }
 
