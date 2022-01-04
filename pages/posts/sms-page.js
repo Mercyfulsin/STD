@@ -9,7 +9,7 @@ export default function SMS() {
     <div className="content-container h-screen overflow-auto">      
       <DefaultLook
         text={<>
-          <h1 className="text-6xl font-bold">
+          <h1 className="text-6xl font-bold mt-20">
             <a className="text-green-600">SMS</a> Dashboard
           </h1>
           <br />

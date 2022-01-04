@@ -9,7 +9,7 @@ const Home = () => {
       <DefaultLook
         text={
           <>
-            <h1 className="text-6xl font-bold">
+            <h1 className="text-6xl font-bold mt-20">
               Welcome to <a className="text-green-600">STD</a>
             </h1>
             <br />
