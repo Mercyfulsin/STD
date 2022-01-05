@@ -9,7 +9,7 @@ const SideBar = () => {
     <div className="fixed top-0 left-0 h-screen w-16 flex flex-col
                   bg-white dark:bg-gray-900 shadow-lg">
                     
-        <SideBarIcon icon={<SiTwilio size="28" />} text="Homepage" link="/" />
+        <SideBarIcon icon={<SiTwilio size="28" />} link="/" />
         <Divider />
         <SideBarIcon icon={<FaPhone size="20" />} text="Voice" />
         <SideBarIcon icon={<TiMessages size="20" />} text="SMS" link="/posts/sms-page" />
@@ -25,9 +25,9 @@ const SideBarIcon = ({ icon, text, link }) => (
     <Link href={link}>
     {icon}
     </Link>
-    <span className="sidebar-tooltip group-hover:scale-100">
+    { text && <span className="sidebar-tooltip group-hover:scale-100">
       {text}
-    </span>
+    </span>}
   </div>
 );
 
