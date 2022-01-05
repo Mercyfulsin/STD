@@ -4,10 +4,10 @@ import SideBar from '../components/SideBar';
 import Layout from '../components/Layout';
 function MyApp({ Component, pageProps }) {
   return (
-        <Layout>
+        <div className="flex">
         <SideBar />
         <Component {...pageProps} />
-        </Layout>
+        </div>
   );
 }
 

@@ -1,5 +1,4 @@
-import Layout from '../components/Layout';
-import Home from '../components/Home';
+import Home from "./posts/home";
 
 export default function Base() {
   return (
