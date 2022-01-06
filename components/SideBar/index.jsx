@@ -14,21 +14,21 @@ const SideBar = () => {
         <SideBarIcon icon={<FaPhone size="20" />} text="Voice" />
         <SideBarIcon icon={<TiMessages size="20" />} text="SMS" link="/posts/sms-page" />
         <Divider />
-        <SideBarIcon icon={<BsGearFill size="22" />} text="Settings" />
+        <SideBarIcon icon={<BsGearFill size="22" />} text="Settings" link="/posts/settings" />
     </div>
   );
 };
 
 const SideBarIcon = ({ icon, text, link }) => (
   (!link ? link = "" : null),
+  <Link href={link}>
   <div className="sidebar-icon group">
-    <Link href={link}>
     {icon}
-    </Link>
     { text && <span className="sidebar-tooltip group-hover:scale-100">
       {text}
     </span>}
   </div>
+  </Link>
 );
 
 
