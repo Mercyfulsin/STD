@@ -31,13 +31,31 @@ const Settings = () => {
             </code>
           </p>
           <div className="content-list">
-            <LittleSquare
+          <LittleSquare
               title="Twilio Account SID"
               content={
-                <DataDisplay
-                  val={Creds.TWILIO_ACCOUNT_SID}
-                  load={loading}
-                />
+                <DataDisplay val={Creds.TWILIO_ACCOUNT_SID} load={loading} />
+              }
+            />
+
+            <LittleSquare
+              title="Twilio Auth Token"
+              content={
+                <DataDisplay val={Creds.TWILIO_AUTH_TOKEN} load={loading} />
+              }
+            />
+
+            <LittleSquare
+              title="Twilio Messaging Service"
+              content={
+                <DataDisplay val={Creds.TWILIO_MESSAGING_SERVICE_SID} load={loading} />
+              }
+            />
+
+            <LittleSquare
+              title="Twilio Phone #1"
+              content={
+                <DataDisplay val={Creds.TWILIO_NUMBER_1} load={loading} />
               }
             />
           </div>
@@ -66,7 +84,7 @@ const DataDisplay = ({ val, load }) => {
 };
 
 const GetCredentials = async (loading, setLoading) => {
-  Creds = await fetch("/api/hello");
+  Creds = await fetch("/api/credentials");
   Creds = await Creds.json();
   setLoading(false);
 };
