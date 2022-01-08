@@ -23,11 +23,11 @@ const SMS = () => {
           <div className="content-list">
             <LittleSquare
               title="Send SMS"
-              content={<Textarea textName="SMS_Box_1" />}
+              content={<Textarea textName="SMS_Box_1" btnStr="Send" placeholder="Message" />}
             />
             <LittleSquare
               title="Fetch SMS"
-              content={<Textarea textName="SMS_Box_1" />}
+              content={<Textarea textName="SMS_Box_2" btnStr="Grab (10)" placeholder="SID's" readOnly={true} />}
             />
           </div>
 
