@@ -23,8 +23,9 @@ async function handler(req, res) {
   
       break;
     case 'POST':
+      console.log("POSTING");
       client.messages
-      .create({from: process.env.TWILIO_NUMBER_1, body: , to: '+16193417902'})
+      .create({from: process.env.TWILIO_NUMBER_1, body: content, to: process.env.PERSONAL_NUMBER})
       .then(message => console.log(message.sid));
       console.log(`Post smsSID: ${smsSID}`);
       break;

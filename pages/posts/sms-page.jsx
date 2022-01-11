@@ -12,9 +12,16 @@ const dataGrab = async (url) => {
   return(json);
 };
 
-const sendSMS = async (url) => {
+const sendSMS = async ({url, data}) => {
   console.log("In sendSMS");
-  
+  console.log(`URL: ${url}, Data: ${data}`);
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
   console.log("Exiting sendSMS");
 };
 
