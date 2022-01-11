@@ -2,6 +2,22 @@ import LittleSquare from "../../components/LittleSquare";
 import Textarea from "../../components/Textarea";
 import ContentContainer from "../../components/ContentContainer";
 
+const dataGrab = async (url) => {
+  console.log("In Data Grab");
+  const data = await fetch(url);
+  console.log("Data grabbed");
+  const json = await data.json();
+  console.log("JSON'd data");
+  console.log(json);
+  return(json);
+};
+
+const sendSMS = async (url) => {
+  console.log("In sendSMS");
+  
+  console.log("Exiting sendSMS");
+};
+
 const SMS = () => {
   return (
     <ContentContainer
@@ -27,7 +43,7 @@ const SMS = () => {
             />
             <LittleSquare
               title="Fetch SMS"
-              content={<Textarea textName="SMS_Box_2" btnStr="Grab (10)" placeholder="SID's" readOnly={true} />}
+              content={<Textarea textName="SMS_Box_2" btnStr="Grab (10)" placeholder="SID's" readOnly={true} func={dataGrab} url="/api/SMS/0?qty=10&type=id" />}
             />
           </div>
 
@@ -36,6 +52,9 @@ const SMS = () => {
       }
     />
   );
-}
+};
+
+
+
 
 export default SMS;
