@@ -1,4 +1,4 @@
-async function handler(req, res) {
+export default function handler(req, res) {
   // ===== /api/twilio/
   const {
     // query: { smsSID, qty, type },
@@ -9,15 +9,15 @@ async function handler(req, res) {
   switch (method) {
     case "GET":
         console.log(`Get: ${body}`);
-        res.send(200).json({'CheckLogs': 'TRUE'});
+        res.status(200).json({'CheckLogs': 'TRUE'});
       break;
     case "POST":
         console.log(`Post: ${body}`);
-        res.send(200).json({'CheckLogs': 'TRUE'});
+        res.status(200).json({'CheckLogs': 'TRUE'});
       break;
     default:
         console.log(`Default: ${body}`);
-        res.send(200).json({'CheckLogs': 'TRUE'});
+        res.status(200).json({'CheckLogs': 'TRUE'});
       break;
   }
-}
+};

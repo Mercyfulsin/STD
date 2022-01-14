@@ -2,16 +2,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
-async function handler(req, res) {
-  // ===== /api/SMS/[smsSID]?qty=#
-  const {
-    query: { smsSID, qty, type },
-    method,
-    body,
-  } = req;
 
-  switch (method) {
-    case "GET":
       console.log(type);
       let temp = await client.messages.list({ limit: parseInt(qty) });
 
