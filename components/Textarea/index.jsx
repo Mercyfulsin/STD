@@ -39,7 +39,7 @@ const Textarea = (child) => {
         <button
           id="ok-btn"
           className="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
-          onClick={ async () => document.getElementById(child.textName).innerText = await child.func(child.url)} 
+          onClick={ async () => document.getElementById(child.textName).value = await child.func(child.url, document.getElementById(child.textName).value)}
           // setShowModal(true)
         >
           {child.btnStr}

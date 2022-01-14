@@ -12,16 +12,16 @@ const dataGrab = async (url) => {
   return(json);
 };
 
-const sendSMS = async ({url, data}) => {
+const sendSMS = async (url, data) => {
   console.log("In sendSMS");
-  console.log(`URL: ${url}, Data: ${data}`);
+  console.log(`URL: ${url}, Data: ${JSON.stringify(data)}`);
   fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
-  })
+    body: JSON.stringify(data)
+  });
   console.log("Exiting sendSMS");
 };
 
@@ -46,7 +46,7 @@ const SMS = () => {
           <div className="content-list">
             <LittleSquare
               title="Send SMS"
-              content={<Textarea textName="SMS_Box_1" btnStr="Send" placeholder="Message" />}
+              content={<Textarea textName="SMS_Box_1" btnStr="Send" placeholder="Message" func={sendSMS} url="/api/SMS/0?type=send"  />}
             />
             <LittleSquare
               title="Fetch SMS"
