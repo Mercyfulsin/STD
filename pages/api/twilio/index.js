@@ -14,8 +14,8 @@ export default function handler(req, res) {
     case "POST":
         
         console.log(req.body);
-        res.writeHead(200, {'Content-Type': 'text/json'});
-        res.end({'Received':'True'});
+        console.log(`Ended POST ${req.body.SmsSid}`);
+        res.send(200);
         console.log("Ended POST");
       break;
     default:
