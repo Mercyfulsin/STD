@@ -12,9 +12,9 @@ export default function handler(req, res) {
         res.status(200).json({'CheckLogs': 'TRUE'});
       break;
     case "POST":
-        console.log(req);
+        
         console.log(req.body);
-        console.log(`Post: ${body}`);
+        
         res.status(200).json({'CheckLogs': 'TRUE'});
       break;
     default:
