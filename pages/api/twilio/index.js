@@ -1,3 +1,5 @@
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+
 export default function handler(req, res) {
   // ===== /api/twilio/
   const {
@@ -13,9 +15,11 @@ export default function handler(req, res) {
       break;
     case "POST":
         console.log(`Ended POST ${req.body.SmsSid}`);
-        res.writeHead(200, {'Content-Type': 'text/csv'})
-        res.end("success");
-        console.log("Ended POST");
+        const twiml = new MessagingResponse();
+        console.log(`Incoming message from ${req.body.From}: ${req.body.Body}`);
+        twiml.message('');
+        res.writeHead(200, {'Content-Type': 'text/xml'});
+        res.end(twiml.toString());
       break;
     default:
         console.log(`Default: ${body}`);
