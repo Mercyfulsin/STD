@@ -1,7 +1,8 @@
 import LittleSquare from "../../components/LittleSquare";
 import ContentContainer from "../../components/ContentContainer";
 import { useEffect, useState } from "react";
-import { stringify } from "postcss";
+import { server } from '../../config';
+
 let Creds = {};
 
 const Settings = () => {
@@ -84,7 +85,7 @@ const DataDisplay = ({ val, load }) => {
 };
 
 const GetCredentials = async (loading, setLoading) => {
-  Creds = await fetch("/api/credentials");
+  Creds = await fetch(`${server}/api/credentials`);
   Creds = await Creds.json();
   setLoading(false);
 };
