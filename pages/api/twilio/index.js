@@ -15,7 +15,7 @@ export default function handler(req, res) {
         
         console.log(req.body);
         
-        res.status(200).json({'CheckLogs': 'TRUE'});
+        res.status(200).json({ 'SMS_SID': req.body.SmsSid });
       break;
     default:
         console.log(`Default: ${body}`);
