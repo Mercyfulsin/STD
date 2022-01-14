@@ -12,10 +12,9 @@ export default function handler(req, res) {
         res.status(200).json({'CheckLogs': 'TRUE'});
       break;
     case "POST":
-        
-        console.log(req.body);
         console.log(`Ended POST ${req.body.SmsSid}`);
-        res.send(200);
+        res.writeHead(200, {'Content-Type': 'text/csv'})
+        res.end("success");
         console.log("Ended POST");
       break;
     default:
