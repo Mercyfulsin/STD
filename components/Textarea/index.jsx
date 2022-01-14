@@ -6,7 +6,7 @@ const Textarea = (child) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="flex justify-center">
-      <div className="mb-3 xl:w-96">
+      <div className="mb-3 xl:w-full l:w-full sm:w-full">
         <label
           htmlFor={child.textName}
           className="form-label inline-block mb-2 text-gray-700"

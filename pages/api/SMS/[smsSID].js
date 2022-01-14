@@ -19,6 +19,7 @@ async function handler(req, res) {
       if (type === "id") {
         let SID = [];
         temp.forEach((item) => SID.push(item.sid));
+        console.log(`SIDS: ${SID}`);
         res.status(200).json(SID);
       } else res.status(200).json(temp);
 
