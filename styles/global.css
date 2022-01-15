@@ -215,7 +215,7 @@
   }
 
   .border-custom {
-    @apply p-4 mt-6 text-left border border-black dark:border-gray-400 w-96 rounded-xl
+    @apply p-4 mt-6 text-left border border-black dark:border-gray-400 w-1/2 rounded-xl
   }
 }
 

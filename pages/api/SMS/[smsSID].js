@@ -14,12 +14,19 @@ async function handler(req, res) {
     case "GET":
       console.log(type);
       let temp = await client.messages.list({ limit: parseInt(qty) });
-
+      console.log(JSON.stringify(temp));
       // ===== /api/SMS/[smsSID]?qty=#&type=id
       if (type === "id") {
         let SID = [];
-        temp.forEach((item) => SID.push(item.sid));
-        console.log(`SIDS: ${SID}`);
+        temp.forEach((item) => SID.push({
+          'SID': item.sid,
+          'From': item.from,
+          'To': item.to,
+          'Direction': item.direction,
+          'DateSent': item.dateSent,
+          'Content': item.body
+        }));
+        console.log(`SIDS: ${JSON.stringify(SID)}`);
         res.status(200).json(SID);
       } else res.status(200).json(temp);
 

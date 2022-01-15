@@ -52,5 +52,4 @@ const Textarea = (child) => {
   );
 };
 
-
 export default Textarea;
