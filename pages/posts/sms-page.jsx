@@ -29,9 +29,10 @@ const TableView = (child) => {
   const [dataObject, setDataObject] = useState([]);
   console.log(`Current Data Object ${JSON.stringify(dataObject[0])}`);
   return (
-    <div>
-      <div id="table-root">
-        <table className="table-fixed">
+    <div className="flex justify-center">
+      <div className="mb-3 xl:w-full l:w-full sm:w-full">
+      <div id="table-root" className="table-fixed overflow-auto">
+        <table>
           <thead>
             <tr>
               <th>SMS SID</th>
@@ -61,6 +62,7 @@ const TableView = (child) => {
           {child.btnStr}
         </button>
       </div>
+    </div>
     </div>
   );
 };
@@ -101,6 +103,7 @@ const SMS = () => {
               content={
                 <TableView
                   textName="SMS_Box_2"
+                  btnStr="Grab (10)"
                   func={dataGrab}
                   url="/api/SMS/0?qty=10&type=id"
                 />
